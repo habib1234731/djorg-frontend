@@ -10,7 +10,7 @@ class Notes extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:8000/api/notes/')
+        axios.get("https://agentt732-djorg.herokuapp.com/api/notes/")
             .then(response => {
                 this.setState({ notes: response.data })
             })
