@@ -21,13 +21,14 @@ class NoteForm extends Component {
         // }
         // let csrftoken = Cookies.get('csrftoken');
         // console.log(csrftoken);
+        console.log("creating config");
         let config = {
             headers: {
                 Authorization: `Token ${localStorage.getItem("authToken")}`
             }
         }
         console.log(config);
-        axios.post(`${process.env.API_URL}api/notes/`, { 
+        axios.post(`${process.env.API_URL}/api/notes/`, { 
             title: this.state.title,
             content: this.state.content
          }, config)
