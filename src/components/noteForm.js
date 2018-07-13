@@ -27,7 +27,7 @@ class NoteForm extends Component {
             }
         }
         console.log(config);
-        axios.post('http://localhost:8000/api/notes/', { 
+        axios.post((`${process.env.API_URL}api/notes/`, { 
             title: this.state.title,
             content: this.state.content
          }, config)

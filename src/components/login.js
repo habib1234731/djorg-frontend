@@ -26,7 +26,7 @@ export default class Login extends Component {
 
     loginHandler = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:8000/api-token-auth/', { 
+        axios.post(`${process.env.API_URL}api-token-auth/`, { 
             username: this.state.username,
             password: this.state.password
          })
